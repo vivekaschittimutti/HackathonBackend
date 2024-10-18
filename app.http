@@ -1,0 +1,52 @@
+GET http://localhost:3000/students/
+
+###
+POST http://localhost:3000/students/
+Content-Type: application/json
+{"id":1,"name":"John Doe","department":"Computer Science","enrolledCourses":"CS101"}
+
+###
+GET http://localhost:3000/courses/
+
+###
+POST http://localhost:3000/courses/
+Content-Type: application/json
+{"id":101,"name":"Data Structures","type":"theory","prerequisites":"None","semesterOffered":"Fall"}
+
+###
+GET http://localhost:3000/teachers/
+
+###
+POST http://localhost:3000/teachers/
+Content-Type: application/json
+{
+    "id": 1,
+    "name": "Dr. Smith",
+    "department": "Mathematics",
+    "ratings": 4.5,
+    "researchProjects": "Quantum Computing",
+    "patents": "AI Algorithms",
+    "academicBackground": "PhD in Mathematics"
+}
+
+###
+
+POST http://localhost:3000/teacher-ratings/
+Content-Type: application/json
+{
+    "teacherId": 1,
+    "rating": 4.7,
+    "feedback": "Excellent teaching style!"
+}
+
+###
+GET http://localhost:3000/student-courses/
+
+POST http://localhost:3000/student-courses/
+Content-Type: application/json
+{
+    "studentId": 1,
+    "courseId": 101,
+    "teacherId": 1
+}
+
